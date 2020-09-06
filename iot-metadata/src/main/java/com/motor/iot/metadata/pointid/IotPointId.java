@@ -35,13 +35,13 @@ public class IotPointId implements Serializable {
     private String entityCode;
 
     public IotPointId(IotEntityPoint entityPoint, IotEntity entity) {
-        this.space = new IotSpace(entity.getScopeCode());
+        this.space = new IotSpace(entity.getNamespace());
         this.modelCode = new IotModelCode(entity.getCategoryId(), "0");
         this.pointCode = new IotPointCode("2", entityPoint.getDataType(), entityPoint.getCode());
         this.entityCode = entity.getCode();
     }
     public IotPointId(IotModelPoint entityPoint, IotModel model, IotEntity entity) {
-        this.space = new IotSpace(entity.getScopeCode());
+        this.space = new IotSpace(entity.getNamespace());
         this.modelCode = new IotModelCode(entity.getCategoryId(), model.getCode());
         this.pointCode = new IotPointCode("1", entityPoint.getDataType(), entityPoint.getCode());
         this.entityCode = entity.getCode();

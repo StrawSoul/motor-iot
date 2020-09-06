@@ -1,6 +1,6 @@
-package com.motor.iot.metadata;
+package com.motor.iot.metadata.constants;
 
-import com.motor.common.domain.BaseEntity;
+import com.motor.common.exception.ErrorCode;
 
 /**
  * ===========================================================================================
@@ -14,39 +14,14 @@ import com.motor.common.domain.BaseEntity;
  * ===========================================================================================
  * 变更记录
  * -------------------------------------------------------------------------------------------
- * version: 0.0.0  2020/8/31 16:00  zlj
+ * version: 0.0.0  2020/9/4 11:00  zlj
  * 创建
  * -------------------------------------------------------------------------------------------
  * version: 0.0.1  {date}       {author}
  * <p>
  * ===========================================================================================
  */
-public class IotEntity extends BaseEntity<String> {
-    private String modelId;
-    private String categoryId;
-    private String namespace;
+public interface MetadataErrorCode {
 
-    public String getModelId() {
-        return modelId;
-    }
-
-    public void setModelId(String modelId) {
-        this.modelId = modelId;
-    }
-
-    public String getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getNamespace() {
-        return namespace;
-    }
-
-    public void setNamespace(String namespace) {
-        this.namespace = namespace;
-    }
+    ErrorCode CATEGORY_IS_EMPTY = new ErrorCode("META00001","CATEGORY_IS_EMPTY", "主分类不能为空");
 }

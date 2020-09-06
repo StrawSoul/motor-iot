@@ -23,13 +23,13 @@ import com.motor.common.domain.BaseEntity;
  */
 public class IotModel extends BaseEntity<String> {
 
-    private String categoryId;
+    private String type;
 
-    public String getCategoryId() {
-        return categoryId;
+    public String getType() {
+        return type;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
+    public void setType(String type) {
+        this.type = type;
     }
 }

@@ -26,7 +26,7 @@ public class IotModelPointConfig extends BaseEntity<String> {
     private String type;
     private String configKey;
     private String configValue;
-    private String modelPointId;
+    private String modelPointCode;
 
     public String getType() {
         return type;
@@ -52,11 +52,11 @@ public class IotModelPointConfig extends BaseEntity<String> {
         this.configValue = configValue;
     }
 
-    public String getModelPointId() {
-        return modelPointId;
+    public String getModelPointCode() {
+        return modelPointCode;
     }
 
-    public void setModelPointId(String modelPointId) {
-        this.modelPointId = modelPointId;
+    public void setModelPointCode(String modelPointCode) {
+        this.modelPointCode = modelPointCode;
     }
 }

@@ -14,6 +14,9 @@
          http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd"
 >
     <bean name="mybatisPagingInterceptor" class="com.motor.common.mybatis.MotorMybatisPagingInterceptor" />
+    <bean name="sequenceRepository" class="com.motor.common.spring.repository.MysqlSequenceRepository">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
     <bean name="primaryKeyProducer" class="com.motor.iot.metadata.server.handler.IotPrimaryKeyProducer" >
         <constructor-arg >
             <map>

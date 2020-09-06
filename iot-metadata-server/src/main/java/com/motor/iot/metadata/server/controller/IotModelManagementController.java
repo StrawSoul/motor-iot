@@ -11,6 +11,7 @@ import com.motor.iot.metadata.server.command.IotModelModify;
 import com.motor.iot.metadata.server.command.IotModelSearch;
 import com.motor.iot.metadata.server.service.IotModelManagementService;
 import com.motor.message.http.servlet.HttpServletCommandBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +38,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("management/iot/model")
 public class IotModelManagementController {
 
+    @Autowired
     IotModelManagementService iotModelService;
 
     @PostMapping
